@@ -16,7 +16,7 @@ export function useHyperloop() {
   };
 
   useEffect(() => {
-    let interval: Timer;
+    let interval: ReturnType<typeof setInterval>;
 
     if (systemState !== 'IDLE' && systemState !== 'EMERGENCY_STOP') {
       interval = setInterval(() => {
